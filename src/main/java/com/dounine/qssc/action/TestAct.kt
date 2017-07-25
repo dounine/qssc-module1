@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class TestAct {
 
-    @Value("\${spring.application.name}")
-    val foo: String = "";
+    @Value("\${db.driver}")
+    lateinit var foo: String
     @Autowired
-    lateinit var project: IProject;
+    lateinit var project: IProject
 
     @GetMapping("test")
     fun test(): String {
         println("success")
-        return project.getName()
+        return project.getName()+foo
     }
 }

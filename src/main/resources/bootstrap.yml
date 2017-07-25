@@ -1,6 +1,9 @@
 spring:
   application:
-    name: foo
+    name: qssc
   cloud:
     config:
-      uri: http://localhost:8881
+      uri: http://localhost:8888
+      profile: db
+
+
